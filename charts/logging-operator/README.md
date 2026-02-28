@@ -60,6 +60,7 @@ Use `createCustomResource=false` with Helm v3 to avoid trying to create CRDs fro
 | rbac.createAggregatedAdminClusterRole | bool | `true` | Create ClusterRole that extend the existing admin ClusterRole to interact with logging-operator CRDs # Ref: https://kubernetes.io/docs/reference/access-authn-authz/rbac/#aggregated-clusterroles |
 | monitoring.serviceMonitor.enabled | bool | `false` | Create a Prometheus Operator ServiceMonitor object. |
 | monitoring.serviceMonitor.additionalLabels | object | `{}` |  |
+| monitoring.serviceMonitor.interval | string | `""` | Scrape interval for the operator metrics endpoint. If empty, Prometheus uses its global default scrape interval. |
 | monitoring.serviceMonitor.metricRelabelings | list | `[]` |  |
 | monitoring.serviceMonitor.relabelings | list | `[]` |  |
 | podSecurityContext | object | `{}` | Pod SecurityContext for Logging operator. [More info](https://kubernetes.io/docs/concepts/policy/security-context/) # SecurityContext holds pod-level security attributes and common container settings. # This defaults to non root user with uid 1000 and gid 2000.	*v1.PodSecurityContext	false # ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/ |
