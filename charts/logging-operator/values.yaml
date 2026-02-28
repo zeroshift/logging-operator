@@ -165,6 +165,15 @@ logging:
   fluentbitDisabled: false
   # -- Fluent-bit configurations https://kube-logging.github.io/docs/configuration/crds/v1beta1/fluentbit_types/
   fluentbit: {}
+  # Metrics and ServiceMonitor configuration example:
+  #  metrics:
+  #    enabled: true
+  #    serviceMonitor: true
+  #    interval: "15s"
+  #    timeout: "5s"
+  #    serviceMonitorConfig:
+  #      additionalLabels: {}
+  #      honorLabels: false
 
   # -- Flag to disable fluentd completely
   fluentdDisabled: false
@@ -193,6 +202,15 @@ logging:
 
   # -- Syslog-NG statefulset configuration
   syslogNG: {}
+  # Metrics and ServiceMonitor configuration example:
+  #  metrics:
+  #    enabled: true
+  #    serviceMonitor: true
+  #    interval: "15s"
+  #    timeout: "5s"
+  #    serviceMonitorConfig:
+  #      additionalLabels: {}
+  #      honorLabels: false
 
   # -- Default flow for unmatched logs. This Flow configuration collects all logs that didn’t match any other Flow.
   defaultFlow: {}
