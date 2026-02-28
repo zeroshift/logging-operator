@@ -85,6 +85,8 @@ monitoring:
     enabled: false
 
     additionalLabels: {}
+    # -- Scrape interval for the operator metrics endpoint. If empty, Prometheus uses its global default scrape interval.
+    interval: ""
     metricRelabelings: []
     relabelings: []
 
@@ -168,6 +170,16 @@ logging:
   fluentdDisabled: false
   # -- Fluentd configurations https://kube-logging.github.io/docs/configuration/crds/v1beta1/fluentd_types/
   fluentd: {}
+  # Metrics and ServiceMonitor configuration example:
+  #  metrics:
+  #    enabled: true
+  #    serviceMonitor: true
+  #    interval: "30s"
+  #    timeout: "5s"
+  #    port: 24231
+  #    serviceMonitorConfig:
+  #      additionalLabels: {}
+  #      honorLabels: false
   # 20Gi persistent storage is configured for fluentd by default.
   # Here is an example, on how to override it:
   #  bufferStorageVolume:
