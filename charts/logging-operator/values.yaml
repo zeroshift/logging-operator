@@ -174,7 +174,7 @@ logging:
   #  metrics:
   #    enabled: true
   #    serviceMonitor: true
-  #    interval: "30s"
+  #    interval: "15s"
   #    timeout: "5s"
   #    port: 24231
   #    serviceMonitorConfig:
